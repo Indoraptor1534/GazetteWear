@@ -1,0 +1,965 @@
+
+*{
+  font-family: "Zalando Sans SemiExpanded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+   box-sizing: border-box;
+}
+    
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #ffffff;
+}
+body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+.had{
+    width:100vw;
+    
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 1px 3px 8px rgba(0, 0, 0, 0);
+    height: 100px;
+    top: -15px;
+    display: flex ;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+      z-index: 10; 
+      transition: all 0.3s ease;
+      color: white;
+    
+}
+.had.slide{
+    height: 200px;
+}
+
+
+.search{
+    max-width: 100%;
+    margin-top: 50px;;
+    width:800px;
+    background-color: white;
+    border-radius: 15px;
+    height: 40px;
+    border:black solid 2px;
+    display: none;
+    flex-direction: row;
+    align-items: flex-start;
+    font-size: 20px;
+    padding-left:20px;
+    transition: all 0.3s ease;
+    margin-bottom:-20px;
+    opacity: 0;
+    position: absolute;
+}
+
+.profile{
+    width:auto;
+    display: flex;
+    flex-direction: row;
+    margin-top:10px;
+    padding-inline-end: 10px;
+
+    height: 60px;
+    justify-self: flex-end;
+}   
+
+#usr:hover{
+cursor: pointer;
+}
+.ab{
+    color: gray;
+    transition: all 0.3s ease;
+}
+.ab:hover{
+    color: black;
+    cursor: pointer;
+}
+
+ .mainad {
+  position: relative;
+  width: 100vw;
+  height: 56.25vw;
+  overflow: hidden;
+  box-shadow: #00000034 2px 4px 8px;
+}
+ 
+.mainad iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* prevent clicks */
+}
+
+
+
+
+
+.featuredcontainer{
+
+        width:90%;
+       
+    display: grid;
+    grid-template-columns: repeat(4,minmax(0,1fr)) ;
+    
+    background-color: #00000000;
+
+gap:0px;
+    transition: all 0.3s ease;
+    opacity: 1;
+    z-index: 1; 
+
+    margin-top:50px;
+    justify-content: center;   
+    justify-items: center; 
+
+    
+}
+.featured{
+    width:49%;
+    height: 700px;
+    background-color: rgb(156, 156, 156);
+}
+.forcontainer{
+     width:100%;
+    height: 320px;
+    display: flex;
+    flex-direction: row;
+    margin-top:100px;
+    justify-content: space-around;
+    background-color: rgb(91, 91, 91);
+}
+.forpages{
+    width:100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    margin-top:50px;
+    justify-content: space-around;
+    
+}
+.foryou{
+    width:300px;
+    height:300px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.in:focus{
+    outline: none;
+}
+fieldset{
+    width:490px;
+    border-radius: 10px;
+    height: 60px;
+    font-size: 25px;
+    margin-top:50px;
+    border: 2px solid black;
+    padding: 10px;
+    transition: all 0.3s ease;
+    align-items: center;
+   
+}
+legend{
+    font-size: 13px;
+}
+fieldset:focus-within{
+    transform: scale(1.03);
+   
+}
+.button{
+    transition: all 0.3s ease;
+    
+}
+.button:hover{
+    cursor: pointer;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+.search:focus-within{
+    transform: scale(1.02);
+    
+}
+.TOU{
+    transition: all 0.3s ease;
+    color: gray;
+}
+.TOU:hover{
+    cursor: pointer;
+    color: black;
+}
+.SidePanel{
+
+  position: absolute;       
+  top: 0;                
+  left: 0;                
+  width: 200px;           
+  height: 300vh;          
+  
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.747);
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  gap: 5px;
+  
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
+   
+}
+
+
+.ResultContainer{
+     transform: translateY(70px);
+    transform:translateX(100px);
+
+    width:83vw;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    gap:30px;
+
+    margin-left:50px;
+    transition: all 0.3s ease;
+    opacity: 1;
+    z-index: 1; 
+    
+}
+.ResultBox{
+    
+       width:300px;
+    height: 400px;
+    transform: translateY(-100px);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    opacity: 0;
+    
+    
+
+}
+.ResultBox.slide{
+    opacity: 1;
+   transform: translateY(0);
+}
+.ResultBox:hover{
+    transform: translateY(-20px);
+    cursor: pointer;
+}
+
+.ResultBoxGray{
+    width:inherit;
+    flex: 1;                      /* auto fill the top area */
+    aspect-ratio:  1/1;
+background-color: #f3f3f3;
+
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+        justify-content: center;
+     align-items: center;
+
+}
+.ResultBoxWhite{
+    width:inherit;
+    height: 30%;
+        display: flex;
+     flex-direction: column;
+  
+     justify-content: flex-start;
+     align-items: flex-start;
+
+}
+
+
+
+#Home{
+      position: relative;
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+#Home:hover{
+    cursor: pointer;
+  
+}
+.Show{
+    display: flex;
+    flex-direction: row;
+    
+    font-size: 20px;
+    transform: translateX(150px);
+    text-decoration: underline;
+
+
+}
+#Shw:hover{
+    cursor: pointer;
+}
+#Home::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: #000000;
+    transition: width 0.3s ease;
+}
+#Home:hover::after{
+    width:100%
+}
+.Options{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 70px;
+    color: #000000;
+    margin-top:28px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin-top:50px;
+    box-shadow: 0px 1px 10px  rgba(0, 0, 0, 0.458);
+    
+
+}
+.dropdown-wrapper {
+  position: relative; /* this anchors the dropdown */
+  display: inline-block;
+}
+
+    .dropdown{
+  position: absolute;
+  top: 100%;        /* below the trigger element */
+  left: 0;   
+     transform: translateX(-45%);  /* start aligned to the left of the parent */
+  min-width: 120px; /* ensure readable width */
+  max-width: 90vw;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.17);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 3px;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  transition: height 0.5s ease, opacity 0.3s ease;
+  box-shadow: none;
+  z-index: 999;
+  backdrop-filter:blur(10px);
+    }
+    .dropdownPart{
+    width:inherit;
+top:5px;
+    border-radius: 5px;
+    transition: all 0.1s ease;
+  background-color:rgba(255, 255, 255, 0);
+  color: white;
+    border: none;
+      
+    }
+    .dropdown.slide{
+    height: 43px;/* set this slightly larger than expected content height */
+    opacity: 1;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.351);
+  
+    }
+.dropdownPart:hover{
+    background-color: rgba(4, 4, 4, 0.803);
+    cursor: pointer;
+}
+.dropdownPart.W:hover{
+    background-color: rgba(157, 157, 157, 0.803);
+    cursor: pointer;
+}
+#Sz:hover{
+    cursor: pointer;
+}
+#Cst:hover{
+    cursor: pointer;
+}
+
+#X{
+     position: absolute;
+  right: 20px;                 /* stay 20px from the right edge */
+  top: 25%;                    /* center vertically */
+  transform: scale(1); /* combine vertical centering + scale */
+  height: 20px;
+  width: 20px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+#X:hover{
+ transform: scale(1.2);
+    cursor:pointer;
+}
+#search{
+    cursor: pointer;
+}
+#searchl{
+    cursor: pointer;
+}
+#Cat{
+    cursor: pointer;
+}
+.Rebody{
+    display: flex;
+    flex-direction: row;
+    height: 110vh;
+    width: 100%;
+
+    margin-top:-100px;
+}
+.Gray{
+    width:50%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.451) ;
+    box-shadow: 5px 0px 2px rgba(0, 0, 0, 0.336);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.White{
+       width:50%;
+    height: 100%;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+.Writing{
+
+margin-left:30px;
+height: 500px;;
+}
+.Writing button{
+border-radius: 40px; 
+background-color: black;
+color: white;
+font-size: 20px; 
+width: 350px;
+padding: 10px;
+margin-top: 20px;
+height: 50px;
+transition: all 0.3s ease;
+opacity:0
+}
+.butto{
+border-radius: 40px; 
+background-color: black;
+color: white;
+font-size: 20px; 
+width: 100%;
+padding: 10px;
+margin-bottom:10px;
+margin-top:10%;
+height: 65px;
+transition: all 0.3s ease;
+opacity:1
+}
+.butto:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+.Writing button:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+#WPG {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+#WPG.visible  {
+  opacity: 1;
+ 
+}
+#WPG.visible button {
+  opacity: 1;
+
+}
+
+#OVR{
+    position: fixed;
+       display: none;
+       opacity: 0;
+       width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000097;
+    transition: all 0.5s ease;
+    z-index:2;
+}
+#GW{
+    transition: all 0.5s ease;
+
+}
+#searchl{
+        position: relative;
+        display: inline-block;
+        color: rgb(0, 0, 0);
+        
+}
+#searchl::after{
+       content: "";
+    position: absolute;
+    left: -18px;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+#searchl.black::after{
+       content: "";
+    position: absolute;
+    left: -18px;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: #000000;
+    transition: width 0.3s ease;
+}
+#searchl:hover::after{
+    width:130%
+}
+.icon{
+    filter:invert(100%)
+}
+.Sug{
+        position: relative;
+        display: inline-block;
+       
+}
+.Sug::after{
+       content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width 0.2s ease;
+
+}
+.Sug.black:after{
+     background-color: #000000;
+}
+.Sug:hover::after{
+    width:100%
+}
+.BagContainer{
+        padding-left:13vw;
+    width:50%;
+ max-width: 950px;
+        width:100vw;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    gap:30px;
+transform: translateY(100px);
+transform: scale(20vw);
+background-color: rgba(0, 0, 0, 0);
+
+
+
+    transition: all 0.3s ease;
+    opacity: 1;
+    z-index: 1; 
+
+    margin-top:50px;
+    justify-content: center;
+
+    
+}
+.BagItem{
+    
+       width:100%;
+    height: 200px;
+
+
+    display: flex;
+    flex-direction: row;
+    transition: all 0.3s ease;
+    opacity: 1;
+         background-color: rgba(218, 218, 218, 0);
+  
+         border-radius: 10px;
+
+    
+    
+
+}
+.BAg{
+    display:grid;
+    grid-template-columns: 1fr 13vw;
+    max-width: 100%;
+    width:100%;
+
+    justify-self:end;
+}
+.BagItemGray{
+ width:20%;
+aspect-ratio: 2/2;
+
+  background-color: #f3f3f3;
+ 
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+        justify-content: center;
+     align-items: center;
+     
+
+}
+.BagItemWhite{
+    width:100%;
+    height: inherit;
+        display: flex;
+     flex-direction: column;
+
+  
+     justify-content: space-between;
+     align-items: flex-start;
+
+
+}
+
+.Total{
+    
+    transform: translateY(120px);
+    width:27vw;
+    min-height: 55vh;
+    max-width: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+    margin-left:-20vw;
+    border-radius: 30px;
+
+    font-weight: 100;
+    color: rgb(80, 80, 80);
+}
+
+.menu{
+    width:200px;
+    min-height: 100px;
+    background-color:#ffffff ;
+    border-radius: 20px;
+    box-shadow: 2px 4px 8px #100E09;
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    z-index: 100;
+    color:#100E09 ;
+    justify-content: center;
+    align-items: center;
+}
+.remove-btn{
+    
+    height: 50px;
+    width:100px;
+    border-radius: 10px;
+    gap:10px;
+    margin-left:20px;
+    cursor: pointer;
+    transition:all 0.3s ease;
+     margin-bottom:10px;
+     background-color: rgb(255, 255, 255);
+     border: 0.5px solid rgba(0, 0, 0, 0.149);
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+  
+
+}
+
+.Minus{
+    font-size: 23px;
+    width:35px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    display: none;
+
+
+
+}
+
+.TrashAndMinus{
+   display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    margin-left:-6px;
+
+
+}
+
+
+.TrashIcon{
+transition: all 0.1s ease-in-out;
+}
+
+.remove-btn:has(.TrashAndMinus:hover){
+    transform: rotateZ(2deg);
+}
+.remove-btn:has(.Plus:hover){
+    transform: rotateZ(-2deg);
+}
+
+.Plus{
+transition: all 0.3s ease-in-out;
+font-size:25px
+ 
+}
+
+
+.Con{
+        width:inherit;
+margin-top:5px;
+
+    transition: all 0.1s ease;
+  background-color:rgba(255, 255, 255, 0);
+  color: rgb(0, 0, 0);
+    border: none;
+display: flex;
+justify-content: center;
+}
+.Con:hover{
+    background-color: rgba(4, 4, 4, 0.803);
+    cursor: pointer;
+    color: white;
+}
+.in{
+width:490px;
+border-radius: 10px;
+height: 50px;
+font-size: 25px;
+border:none;
+margin-top:-5px;
+background-color:rgb(0,0,0,0)
+}
+.SI{
+     background-color:rgba(255, 255, 255, 0); 
+     height: 50vh; 
+     display: flex;
+     flex-direction: column;
+     margin-top: 100px;
+}
+.H1{
+    font-size:15px;
+     margin-top: 20px;
+      color: gray;
+      width:450px
+}
+.H2{
+    width:450px;
+    margin-top: 30px;
+}   
+.BagNameAndMRP{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+width: 100%;
+
+}
+.BagNameAndSize{
+display: flex;
+flex-direction: column;
+background-color: rgba(4, 4, 4, 0);
+width:100%;
+}
+.bagitemname {
+    font-weight: 400;
+    font-size: 22px;
+    margin-left:20px;
+    margin-top:5px
+}
+
+.bagitemmrp {
+    word-spacing: 15px;
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 6px;;
+}
+
+.bagitemsize {
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.623);
+    margin-top: -5px;
+        margin-left:20px;
+}
+
+@media (max-width: 958px){
+
+    .ResultBox{
+       width:150px;
+       height:300px;
+       opacity: 1;
+       
+    }i
+    .ResultboxWhite{
+        justify-content: center;
+        align-items: center;
+        height: 30%;
+    }
+     .Rebody{
+        flex-direction: column;
+     }
+     .Gray{
+        width:100%;
+        height: 50%;
+        box-shadow: 0px 1px 1px black;
+     }
+     .White{
+        margin-top: 3.558vh;
+        width:100%;
+        height: 50%;
+       
+     }
+     .Cat{
+        display: none;
+     }
+     #GW{
+        margin-top: 3vh;
+        margin-left:5vw;
+       font-size: 25px;
+     }
+     #searchl{
+        display: none;
+     }
+     #search{
+        margin-right: 50vw;
+        width:3.019vw;
+        height: 3.019vw;
+     }
+     #Bag{
+        margin-right:55vw;
+     }
+     .CU{
+        display: none;
+     }
+     #usr{
+        margin-right: -5vw
+     }
+     .search{
+    width:90vw;
+     }
+     .search:hover{
+        transform: scale(1);
+     }
+     .SidePanel{
+        display: none;     
+    }
+    .ResultContainer{
+    transform: translateX(-4.042vw);
+    }
+    #Shw{
+        transform: translateX(-4.042vw);
+    }
+    .USELESS{
+        display: none;
+    }
+    .finalogo{
+        transform: scale(1);
+    }
+   .SI{
+    
+    width:90vw;
+    margin-left:-10vw;
+   }
+   .fieldset{
+width:50vw;
+   }
+   .in{
+    width:90vw;
+    font-size:20px;
+   }
+  .H1{
+    font-size:15px;
+   width:90vw;
+  }
+  .H2{
+width:90vw;
+  }
+  
+    .featuredcontainer{
+        max-width: 90%;
+                
+    
+    grid-template-columns: repeat(2,minmax(0,1fr)) ;
+    
+
+gap:50px;
+   
+    opacity: 1;
+    z-index: 1; 
+
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+    }
+    .BAg{
+        grid-template-columns: 1fr;
+    }
+    .Total{
+        justify-self: center;
+        width:90vw;
+        margin-left: 0px;;
+    }
+    .BagItem{
+        height: 15vh;
+        width:80vw;
+        
+    }
+    .bagitemname{
+        font-size:15px;
+    }
+     .bagitemsize{
+        font-size:10px;
+    }
+     .bagitemmrp{
+        font-size:15px;
+    }
+    .BagItemWhite{
+
+        margin-left:5px
+    }
+    .remove-btn{
+        margin-top:-5px;
+        width:170px;
+        
+    }
+    .butto{
+        margin-bottom:100px;
+    }
+    .BagContainer{
+        padding-left:0px;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(7vh);
+    }
+}

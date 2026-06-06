@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="Style.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+        <title>GazetteWear</title>
+              <link rel="icon" type="image/png" href="Icons/GazetteWear3.png">
+    </head>
+
+    <body >
+              <div class="had"style="height:150px; position: relative;background-color:rgba(255, 255, 255, 1);box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.662);color:black" >
+    <div style="display:flex; flex-direction:column; align-items:center; justify-content:center;">
+            <h1 style="margin-top:-35px;">GazetteWear</h1>
+            <input id="searchbar" class="search" style="opacity: 1;display: flex;margin-top:60px">
+</div>
+
+    <img id="X" src="Icons/X.png">
+
+
+        </div>
+        <div class="headerforsearch">
+
+        </div>
+        <div style="display: flex;flex-direction: row;">
+            <div class="SidePanel"id="SP">
+            
+          <div class="Options"style="justify-content:center;align-items:center;margin-top:45px;">
+            <h2 style="margin-left: -10px;"> Filters</h2>
+
+          </div>
+                 <div class="Options" >
+                    <label style="margin-left: 10px;">Budget:</label>
+                  <select id="Cst" style="margin-top:5px;Border-radius: 5px; padding: 5px; border: 1px solid #ccc; width: 95%;margin-left:9px;">
+                  <option value=1000>None</option>
+                  <option value=50 >Below 50$</option>
+                  <option value=70>Below 70$</option>
+                  </select>
+                </div>
+
+                    <div class="Options" >
+                    <label style="margin-left: 10px;">Size:</label>
+                  <select id="Sz" style="margin-top:5px;Border-radius: 5px; padding: 5px; border: 1px solid #ccc; width: 95%;margin-left:9px;">
+                  <option value="" selected>All</option>
+                  <option value="S" >S</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                  </select>
+                </div>
+                
+
+
+
+            </div>
+  
+            <div style="display: flex; flex-direction: column;">
+                <div  class="Show">
+                    <h4  id="Shw"></h4>
+                    
+                </div>
+            <div class="ResultContainer" id="RC">
+            <h1 id="Sug">
+            Loading Results...  
+            </h1>
+            
+        
+
+        </div>
+        </div>
+        
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/string-similarity@4.0.4/umd/string-similarity.min.js"></script>
+
+        <script type="module" src="Main.js"></script>
+
+    </body>
+</html>
